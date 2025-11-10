@@ -1,0 +1,38 @@
+div{
+    background-color: hsl(74, 100%, 93%);
+    border:2px solid hsl(74, 50%, 93%);
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 2px 2px 5px 5px rgba(2, 2, 2, 0.295);
+}
+
+#H1{
+    color:rgba(0, 0, 0, 0.384);
+    font-size: 30px;
+}
+
+#Label{
+    font-size: 20px;
+}
+
+#Input{
+    font-size: 20px;
+}
+
+#Button{
+    font-size: 20px;
+}
+
+#result{
+    color:rgb(0, 81, 255);
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 10px;
+    width: 400px;
+    padding: 10px 10px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
