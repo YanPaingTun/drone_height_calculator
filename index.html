@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
-    <link rel="stylesheet" href="style.css">
+    <title>飛行計画</title>
+    <link rel="styleSheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1 id="H1">最大飛行高度</h1>
-        <label id="Label" for="Input">地上画像寸法: </label>
-        <select id="Input">
-            <option value="0.01">0.01</option>
-            <option value="0.02">0.02</option>
-            <option value="0.03">0.03</option>
-        </select><br><br>
-        <button id="Button" type="submit" onclick="f1()">Calculate</button><br><br>
-        <p id="result">計算結果はここに表示します。</p>
+    <div class="container">
+        <h1>飛行高度計算</h1>
+        <label for="gsd">地上画像寸法：</label>
+        <select id="gsd">
+            <option value="0.01">1cm</option>
+            <option value="0.02">2cm</option>
+            <option value="0.03">3cm</option>
+        </select>
+        <label>使用機器：</label>
+        <select id="typeOfDrone">
+            <option value="Mavic3E">Mavic3E</option>
+        </select>
+        <button onclick = show_result()>計算</button>
+        <p id="result">結果はここに表示します。</p>
     </div>
-
     <script src="script.js"></script>
-</body>
 </html>

@@ -1,15 +1,21 @@
-let data1 = document.getElementById('Input');
-let data2 = document.getElementById('Button');
-let data3 = document.getElementById('result');
+const gsd = document.getElementById('gsd');
+const typeOfDrone = document.getElementById('typeOfDrone');
+const result = document.getElementById('result');
 
-let sensor_size = 0.01733;
-let no_of_pixels = 5280;
-let length_of_sensor = 0.012;
+const mavic = {sensor_L: 0.0173333, sensor_H: 0.013,
+            L_pixels:5280, H_pixels:3956,
+            focal_length: 0.012 
+            }; //単位:メートル
 
-function f1(){
-    const selectedValue = data1.value;
-    const size_of_pixels = (sensor_size/no_of_pixels);
-    let height_of_flight = (selectedValue/size_of_pixels)*length_of_sensor;
 
-    data3.textContent = `Mavic3E は　地上画像寸法${data1.value}m/pixelのために地上から　${height_of_flight.toFixed(0)}ｍ　まで飛ばせます。`;
-}
+function show_result(){
+    const gsd_v = gsd.options[gsd.selectedIndex].value;
+    const sensor_L = mavic.sensor_L;
+    const L_pixels = mavic.L_pixels;
+    const focal_length = mavic.focal_length;
+
+    const cal = (gsd_v/(sensor_L/L_pixels))*focal_length;
+    let ans = cal.toFixed(3);
+
+    result.textContent = `Mavic3E　の最大飛行高度は ${ans}_m　です。`;
+};
