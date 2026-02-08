@@ -9,17 +9,18 @@
 <body>
     <div class="container">
         <h1>飛行高度計算</h1>
-        <label for="gsd">地上画像寸法：</label>
+        <label for="gsd">地上画画像寸法：</label>
         <select id="gsd">
             <option value="0.01">1cm</option>
             <option value="0.02">2cm</option>
             <option value="0.03">3cm</option>
         </select>
         <label>使用機器：</label>
-        <select id="typeOfDrone">
+        <select id="Drone">
             <option value="Mavic3E">Mavic3E</option>
+            <option value="Phantom4">Phantom4</option>
         </select>
-        <button onclick = show_result()>計算</button>
+        <button onclick = calculate()>計算</button>
         <p id="result">結果はここに表示します。</p>
     </div>
     <script src="script.js"></script>
